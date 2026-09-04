@@ -1,11 +1,8 @@
 from __future__ import annotations
-
 import argparse
 from pathlib import Path
-
 import numpy as np
 import pandas as pd
-
 from ml_utils import (
     BOOLEAN_COLUMNS,
     CATEGORICAL_COLUMNS,
@@ -19,8 +16,6 @@ from ml_utils import (
     to_bool_series,
     write_json,
 )
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Prepare FlyRank refresh feature vector.")
     parser.add_argument("--input", default=str(RAW_PATH), help="Raw anonymized CSV export.")
